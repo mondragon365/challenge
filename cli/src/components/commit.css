@@ -1,0 +1,16 @@
+.commitContainer{
+    margin: auto;
+    width: 50%;
+    border: 3px solid;
+    padding: 10px;
+}
+.commit{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.tittle{
+    flex: 1;
+    font-size: 20px;
+}
