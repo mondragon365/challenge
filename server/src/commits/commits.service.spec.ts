@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { CommitsServiceGH } from './commits.service';
+import { CommitsServiceGH } from './commitsGH.service';
 
 describe('CommitsServiceGH', () => {
   let service: CommitsServiceGH;
