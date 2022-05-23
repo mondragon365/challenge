@@ -4,8 +4,8 @@ import { Octokit } from 'octokit';
 
 @Injectable()
 export class CommitsServiceGH {
-    constructor(private configService: ConfigService){}
-    
+    constructor(private configService: ConfigService) { }
+
     async getCommits() {
 
         const devToken = this.configService.get<string>('TOKEN_GITHUB');

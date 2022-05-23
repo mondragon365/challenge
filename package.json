@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "start": "react-scripts start",
+        "cli": "(cd cli && npm run start)",
+        "server": "(cd server && npm run start)",
+        "dev": "npm run server & npm run cli" 
+    }
+}
+
