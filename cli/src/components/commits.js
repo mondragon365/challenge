@@ -8,8 +8,7 @@ export default function () {
         fetch(process.env.REACT_APP_API_URL+'commits').then(res=>{
             return res.json()
         }).then(res=>{
-            console.log(res)
-            setCommits(res.data)
+            setCommits(res)
         })
     },[]);
     function handleClick(html_url){

@@ -1,11 +1,16 @@
 import { Controller, Get } from '@nestjs/common';
-import { CommitsServiceGH } from './commitsGH.service';
+import { CommitsService } from './commits.service';
+import { CommitsCrawlerService } from './commitsCrawler.service.ts';
 
 @Controller('commits')
 export class CommitsController {
-    constructor(private readonly commitsServiceGH:CommitsServiceGH){}
+    constructor(private readonly commitsService:CommitsService,private readonly commitsCrawlerService: CommitsCrawlerService){}
     @Get()
-    getCommits(){        
-        return this.commitsServiceGH.getCommits();
-    }
+    async getCommits(){        
+        var data = await this.commitsService.getCommits();   
+        if(Array.isArray(data)){
+            return data;                
+        }             
+        return await this.commitsCrawlerService.getCommits(); 
+    } 
 }
